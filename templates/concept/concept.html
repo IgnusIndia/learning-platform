@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
+
+ <p> <h1> {{ object.title }} </h1> <br/>
+
+ <script type="text/javascript">
+$(document).ready(function(){ 
+    $("#myTab li:eq(1) a").tab('show');
+});
+</script>
+<style type="text/css">
+    .bs-example{
+        margin: 20px;
+    }
+</style>
+<div class="col-sm-12">
+<div class="col-sm-6">
+	<p>{{ object.videourl}}</p>
+</div>
+<div class="col-sm-6">
+<div class="bs-example">
+    <ul class="nav nav-tabs" id="myTab">
+        <li><a data-toggle="tab" href="#sectionA">Description</a></li>
+        <li><a data-toggle="tab" href="#sectionB">Notes</a></li>
+        <li><a data-toggle="tab" href="#sectionc">Example</a></li   
+    </ul>
+    <div class="tab-content">
+        <div id="sectionA" class="tab-pane fade in active">
+            <br/>
+            <br/>
+            <br/>
+            <p> {{ object.description }}</p>
+        </div>
+        <div id="sectionB" class="tab-pane fade">
+            <br/>
+            <br/>
+            <br/>
+            <p>{{ object.notes }}</p>
+        </div>
+                <div id="sectionc" class="tab-pane fade">
+             <br/>
+             <br/>
+             <br/>
+            <p>{{ object.example }}</p>
+        </div>
+        
+    </div>
+</div>
+ </div>
+ </div>
+</p>
+
+{% endblock %}

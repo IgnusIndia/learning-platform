@@ -78,11 +78,11 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
-    'south',
+    #'south',
     'profiles',
     #'sendgrid',
     'concept',
-    'rest_framework',
+    #'rest_framework',
     
     #'resources',
 )

@@ -25,8 +25,8 @@ class ConceptListView(ListView):
 class ConceptDetailView(DetailView):
 
     model = Concept
-    template_name = 'concept/contact.html'
+    template_name = 'concept/concept.html'
 
     def get_context_data(self, **kwargs):
-        context = super(ContactDetailView, self).get_context_data(**kwargs)
+        context = super(ConceptDetailView, self).get_context_data(**kwargs)
         return context	
