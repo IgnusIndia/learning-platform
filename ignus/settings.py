@@ -38,6 +38,15 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+TEMPLATE_DIRS = (
+    'templates',)
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    '/static/',
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -47,6 +56,8 @@ SECRET_KEY = '5iaq(xytc)smtf@*%w8boiu0v1-@umoth%zdazx&9o8z6$3z%w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
 
 TEMPLATE_DEBUG = True
 
@@ -69,7 +80,10 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.facebook',
     'south',
     'profiles',
-    'sendgrid',
+    #'sendgrid',
+    'concept',
+    'rest_framework',
+    
     #'resources',
 )
 
@@ -119,5 +133,5 @@ STATIC_URL = '/static/'
 
 SENDGRID_EMAIL_HOST = "smtp.sendgrid.net"
 SENDGRID_EMAIL_PORT = 587
-SENDGRID_EMAIL_USERNAME = "your_sendgrid_username"
-SENDGRID_EMAIL_PASSWORD = "your_sendgrid_password"
+SENDGRID_EMAIL_USERNAME = "shashisp"
+SENDGRID_EMAIL_PASSWORD = "281308cse"
